@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<text class="title">hello world</text>
+<button size="mini">按钮</button>
+<input class="input1" maxlength="10" placeholder="请输入"></input>
