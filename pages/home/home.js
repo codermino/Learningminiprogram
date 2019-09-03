@@ -5,7 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
+    students: [
+      { id: 1, name: "kobe", age: 30 },
+      { id: 2, name: "sunhe", age: 31 },
+      { id: 3, name: "james", age: 21 }
+    ],
+    counter:0
+  },
+  btnClickadd(){
+    // 这种写法是错误的写法，虽然counter的数据会发生改变，但是和vue不同的是界面不会实时响应的发生改变
+    // this.data.counter+=1
+    // console.log(this.data.counter)
 
+    this.setData({
+      counter:this.data.counter+1
+    })
+  },
+
+  btnClicksub(){
+    this.setData({
+      counter:this.data.counter-1
+    })
   },
 
   /**
