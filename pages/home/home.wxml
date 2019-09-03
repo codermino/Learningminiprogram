@@ -1,6 +1,6 @@
 <!--pages/home/home.wxml-->
 <!-- 1.小程序初体验1:对数据绑定,进行列表显示 -->
-<view wx:for="{{students}}">{{item.name}}</view>
+<view wx:for="{{students}}">{{item.name}}:{{item.age}}</view>
 
 <!-- 2.小程序初体验2:事件监听 -->
 <view>counter:{{counter}}</view>
