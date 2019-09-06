@@ -1,8 +1,18 @@
 <!--pages/home/home.wxml-->
 <!-- 1.小程序初体验1:对数据绑定,进行列表显示 -->
-<view wx:for="{{students}}">{{item.name}}:{{item.age}}</view>
-
+<!-- <view wx:for="{{students}}">{{item.name}}:{{item.age}}</view> -->
+<view>{{message}}</view>
 <!-- 2.小程序初体验2:事件监听 -->
 <view>counter:{{counter}}</view>
 <button bindtap="btnClickadd" size="mini">+</button>
 <button bindtap="btnClicksub" size="mini">-</button>
+
+<!-- 第二种获取用户信息的方式 -->
+<view><button size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInof">获取授权</button></view>
+
+<!-- 第三种获取用户信息的方式,type的参数可以在官方文档的组件，开放能力中找到 -->
+<!-- <open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data> -->
+
+
+<view wx:for="{{list}}" wx:key="unique">{{item.title}}</view>
