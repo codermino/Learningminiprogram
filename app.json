@@ -1,6 +1,15 @@
 {
   "pages": [
+    "pages/vfor/vfor",
+    "pages/searchbar/searchbar",
+    "pages/scroll/scroll",
+    "pages/input/input",
+    "pages/image/image",
+    "pages/view/view",
+    "pages/button/button",
+    "pages/text/text",
     "pages/home/home",
     "pages/about/about"
-  ]
+  ],
+  "sitemapLocation": "sitemap39.json"
 }

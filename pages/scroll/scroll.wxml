@@ -1,0 +1,13 @@
+<scroll-view class="container1" scroll-x>
+  <view wx:for="{{10}}" wx:key="unique" class="item1">{{item}}</view>
+</scroll-view>
+
+
+<scroll-view class="container2" scroll-y>
+  <view wx:for="{{10}}" wx:key="unique" class="item2">{{item}}</view>
+</scroll-view>
+
+<!-- 还有一些其他的事件绑定，具体的看官方文档 -->
+<scroll-view class="container2" scroll-y bindscroll="handleScroll">
+  <view wx:for="{{10}}" wx:key="unique" class="item2">{{item}}</view>
+</scroll-view>

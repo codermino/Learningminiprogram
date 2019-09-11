@@ -1,0 +1,26 @@
+<!--pages/button/button.wxml-->
+<button>按钮</button>
+
+<!-- -----------1.size属性------------------ -->
+<button size="mini">按钮</button>
+<button size="mini" >按钮</button>
+
+
+<!-- -------------2.type属性------------------- -->
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warning" >按钮</button>
+<button size="mini" type="primary" >按钮</button>
+
+
+
+<!-- --------------3.plain镂空属性---------------- -->
+<button size="mini" plain>按钮</button>
+
+<!-- --------4.disable属性-------------------- -->
+<button size="mini" disabled>按钮</button>
+
+<!-- -----------5.loading属性-------------------- -->
+<button size="mini" loading="{{isLoading}}" >按钮</button>
+
+<!-- ------------6.hover-class属性------------------ -->
+<button hover-class="pressed">按钮</button>

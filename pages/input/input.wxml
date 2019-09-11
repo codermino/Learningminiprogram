@@ -1,0 +1,18 @@
+<input></input>
+
+
+<input value="哈哈哈"></input>
+
+
+<!-- type属性具体的查看官方文档，决定真机的时候弹出的键盘的类型 -->
+<input type="number"></input>
+
+<input password></input>
+
+<input placeholder="请输入内容"></input>
+
+<input
+  bindinput="handleInput"
+  bindfocus="handleFocus"
+  bindblur="handleBlur">
+</input>

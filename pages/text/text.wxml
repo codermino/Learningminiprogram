@@ -1,0 +1,31 @@
+<!--pages/text/text.wxml-->
+
+
+<!-- --------1.设置内容，相当于span标签------ -->
+<text>hello world\n</text>
+<text>你好，小程序\n</text>
+
+
+<!-- ------------2.设置文本是否可以被选中--------- -->
+
+<!-- 默认情况下是false,如果想要设置为true需要使用{{}} -->
+<text>hello codermino</text>
+<text selectable>hello 小程序</text>
+<text selectable="{{true}}">hello 小程序</text>
+
+
+<!-- -----------------3.space：决定文本中间的空格的大小------------- -->
+<!-- 默认情况下文本中间的空格的大小是nbsp -->
+<!-- ensp是半个中文字符的大小 -->
+<!-- emsp是一个中文字符的大小 -->
+<text>hello world\n</text>
+<text space="nbsp">hello world\n</text>
+<text space="ensp">hello world\n</text>
+<text space="emsp">hello world\n</text>
+
+
+
+<!-- --------------4.decode：是否解码--------------------- -->
+<!-- 如果decode属性设置为true,那么会将内容进行解码 -->
+<text>5 &gt; 3\n</text>
+<text decode>5 &gt; 3</text>

@@ -1,0 +1,12 @@
+<!-- 给item和index换一个名字,主要应用在多层遍历上面 -->
+<!-- block标签，浏览器不会渲染，作用相当于一个盒子 -->
+<!-- wx-key的作用验证,需要一个东西作为唯一标识，如果遍历的元素中有重复的元素，那么就不能作为唯一标识 -->
+
+<!-- <block wx:for="{{nums}}" wx:for-item="num">
+  <block wx:for="{{num}}">
+   <view>{{item}}</view> 
+  </block>
+</block> -->
+
+<!-- <view wx:for="{{letters}}" wx:key="{{item}}">{{item}}</view> -->
+<view wx:for="{{letters}}" wx:key="unique">{{item}}</view>

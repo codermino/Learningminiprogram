@@ -1,0 +1,27 @@
+<!-- image组件的基本使用
+1.image可以是单标签也可以是双标签
+2.image标签有默认大小
+3.是一个行内块元素 -->
+<!-- <image></image> -->
+
+
+
+<!-- src属性 也可以是网上图片的地址  一个 / 代表小程序的根目录 -->
+<image src="../../assert/birdnest.jpg"></image>
+<image src="/assert/birdnest.jpg"></image>
+
+
+<button bindtap="handleChooseAblum">选中图片</button>
+<image src="{{imagePath}}"></image>
+
+
+<!-- 图片的懒加载和bindload和show-menu-by-longpress长按图片识别小程序码
+
+  mode属性看官方文档
+ -->
+<image 
+      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+      bindload="handleLoad"
+      lazy-load
+      show-menu-by-longpress>
+</image>
