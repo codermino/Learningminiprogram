@@ -1,0 +1,13 @@
+// 这里面写js代码
+var message = '你好';
+var name = 'codermino';
+
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+module.exports = {
+  message: message,
+  name: name,
+  sum: sum
+}

@@ -1,0 +1,7 @@
+<wxs src="../../wxs/info.wxs" module="info"/>
+<wxs src="../../wxs/format.wxs" module="format"/>
+
+<view>{{info.name}}</view>
+
+<view>{{format.formatPrice(number)}}</view>
+<view>{{format.dateFormat(time)}}</view>
