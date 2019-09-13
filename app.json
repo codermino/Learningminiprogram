@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/event/event",
     "pages/home/home",
     "pages/about/about"
-  ]
+  ],
+  "sitemapLocation": "sitemap42.json"
 }

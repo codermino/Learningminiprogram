@@ -1,0 +1,29 @@
+.container{
+  display: flex;
+}
+
+.item{
+  flex: 1;
+  text-align: center;
+  background-color: purple;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.view1{
+  background-color: red;
+  width: 600rpx;
+  height: 600rpx;
+}
+
+.view2{
+  background-color: blue;
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.view3{
+  background-color: green;
+  width: 200rpx;
+  height: 200rpx;
+}

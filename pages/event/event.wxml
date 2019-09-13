@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="item" bindtap="handleItemClick" wx:for="{{title}}" wx:key="unique" data-index="{{index}}" data-item="{{item}}">{{item}}</view>
+</view>
+
+
+<!-- 事件的传递和冒泡 -->
+<!-- bind会一层层的传递进去 -->
+<!-- catch会阻止事件的进一步传递 -->
+<view class="view1" capture-bind:tap="handleCaptureView1" bindtap="handleBindTapView1">
+  <view class="view2" capture-catch:tap="handleCaptureView2" bindtap="handleBindTapView2">
+    <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBindTapView3"></view>
+  </view>
+</view>
