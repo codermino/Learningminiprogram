@@ -1,4 +1,35 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
+<!-- <text class="title">hello world</text>
 <button size="mini">按钮</button>
-<input class="input1" maxlength="10" placeholder="请输入"></input>
+<input class="input1" maxlength="10" placeholder="请输入"></input> -->
+
+
+<!-- <my-cpn/> -->
+
+<!-- <my-pro title="哈哈哈" titleclass="showred"/>
+<my-pro title="呵呵呵" titleclass="showgreen"/>
+<my-pro titleclass="showblue"/> -->
+
+<!-- <view>当前计数:{{counter}}</view>
+<my-event bind:increment="handleIncrement"/> -->
+
+<!-- <tab-control titles="{{['衣服','鞋子','裤子']}}" bind:itemClick="handleTabClick"/> -->
+
+<!-- <my-slot>
+  <view>我是slot中间的内容</view>
+</my-slot> -->
+
+<!-- 1.如果想要使用多插槽需要给每一个Components起一个名字name -->
+<!-- 2.还要在multipleSlots: true -->
+
+<!-- 关于组件监听所在页面的生命周期以及组件的生命周期函数可以查看官方文档 -->
+<my-mslot>
+  <view slot="slot2">我是mslot的中间内容</view>
+  <text slot="slot1">我是一段文字</text>
+  <slider value="60" slot="slot4"></slider>
+  <button size="mini" slot="slot3">我是一个按钮</button>
+</my-mslot>
+
+
+
+

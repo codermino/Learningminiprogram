@@ -1,0 +1,3 @@
+<view>我是slot中的开始内容</view>
+  <slot/>
+<view>我是slot中的结束内容</view>

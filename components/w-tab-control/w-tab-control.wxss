@@ -1,0 +1,19 @@
+.tab-control{
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+}
+
+.item{
+  flex: 1;
+  text-align: center;
+}
+
+.active{
+  color: red;
+}
+
+.active text{
+  padding: 30rpx 26rpx;
+  border-bottom: 4px solid red;
+}

@@ -1,0 +1,6 @@
+<view>我是slot开始的内容</view>
+  <view class="view1"><slot name="slot1"/></view>
+  <view class="view2"><slot name="slot2"/></view>
+  <view class="view3"><slot name="slot3"/></view>
+  <view class="view4"><slot name="slot4"/></view>
+<view>我是slot结束的内容</view>

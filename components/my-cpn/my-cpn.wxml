@@ -1,0 +1,2 @@
+<view class="title">我是标题</view>
+<view class="content">我是自定义组件的内容</view>
