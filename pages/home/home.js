@@ -1,4 +1,5 @@
 // pages/home/home.js
+import request from '../../server/network.js'
 Page({
 
   /**
@@ -12,7 +13,37 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    request({
+      url:'http://123.207.32.32:8000/api/v1/recommend'
+    }).then(res=>{
+      console.log(res);
+    }).catch(err=>{
+      console.log(err);
+    })
+    // 以下两种方式是比较传统的方式，现在一般情况下都是使用promise的方式
+    // wx.request({
+    //   url: 'http://123.207.32.32:8000/api/v1/home/multidata',
+    //   // 如果是post请求就需要使用下面这种方式
+    //   data:{
+    //     type:"sell",
+    //     page:1
+    //   },
+    //   success:function(res){
+    //     console.log(res);
+    //   }
+    // })
+    // wx.request({
+    //   // 其他的一些参数可以查看官方文档
+    //   url: 'http://httpbin.org/post',
+    //   method:'post',
+    //   data:{
+    //     name:"codermino",
+    //     age:21
+    //   },
+    //   success:function(res){
+    //     console.log(res);
+    //   }
+    // })
   },
 
   /**
