@@ -1,4 +1,11 @@
-<!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">按钮</button>
-<input class="input1" maxlength="10" placeholder="请输入"></input>
+<!-- 1.showToast弹窗 -->
+<button bind:tap="handleShowToast" size="mini">showToast</button>
+
+<!-- 2.showModal弹窗 -->
+<button bind:tap="handleShowModal" size="mini">showModal</button>
+
+<!-- 3.showLoading弹窗 -->
+<button bind:tap="handleShowLoading" size="mini">showLoading</button>
+
+<!-- 4.showActionSheet弹窗 -->
+<button bind:tap="handleShowActionSheet" size="mini">showActionSheet</button>
