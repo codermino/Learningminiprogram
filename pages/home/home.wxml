@@ -1,4 +1,11 @@
-<!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">按钮</button>
-<input class="input1" maxlength="10" placeholder="请输入"></input>
+<navigator url="/pages/detail/detail" open-type="navigate">跳转到详情页面navigate</navigator>
+<navigator url="/pages/detail/detail" open-type="redirect">跳转到详情页面redirect</navigator>
+
+<navigator url="/pages/about/about" open-type="switchTab">跳转到详情关于switchTab</navigator>
+<navigator url="/pages/detail/detail" open-type="reLaunch">跳转到详情页面reLaunch</navigator>
+
+<view>{{title}}</view>
+<navigator url="/pages/detail/detail?name=codermino&age=21" open-type="navigate">跳转到详情页面navigate</navigator>
+
+
+<button size="mini" bind:tap="handleDetail">代码的方式跳转到详情页</button>
