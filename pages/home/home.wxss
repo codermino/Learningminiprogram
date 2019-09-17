@@ -1,8 +1,0 @@
-/* pages/home/home.wxss */
-.title{
-  color: red;
-  font-size: 20px;
-}
-.input{
-  border: 1px solid #000;
-}

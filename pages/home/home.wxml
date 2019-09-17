@@ -1,4 +1,19 @@
-<!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">按钮</button>
-<input class="input1" maxlength="10" placeholder="请输入"></input>
+<!-- 轮播图的展示 -->
+<w-swiper list="{{banners}}"/>
+
+<!-- 展示推荐数据 -->
+<w-recommends recommends="{{recommends}}"/>
+
+<!-- 展示本周流行 -->
+<w-popular/>
+
+<!-- 展示tab-control -->
+<w-tab-control titles="{{titles}}" bind:tabclick="handleTabClick"/>
+
+
+<!-- 展示商品数据 -->
+<view class="goods">
+  <block wx:for="{{goods[currentType].list}}" wx:key="unique">
+    <view class="goods-item">{{item.title}}</view>
+  </block>
+</view>
