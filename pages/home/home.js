@@ -5,6 +5,7 @@ import{
 }from "../../servers/home.js"
 
 const types=['pop','new','sell']
+const TOP_DISTANCE=1000
 
 Page({
 
@@ -17,8 +18,18 @@ Page({
       new:{page:0,list:[]},
       sell:{page:0,list:[]}
     },
-    currentType:'pop'
+    currentType:'pop',
+    showBackTop:false,
+    isTabFixed:false,
+    tabScrollTop:0
   },
+
+  // 这样写是不正确的，应该监听图片是否加载完成，不然获取的高度是不正确的
+  // onShow(){
+  //   wx.createSelectorQuery().select('#tab-control').boundingClientRect((res)=>{
+  //     console.log(res);
+  //   }).exec();
+  // },
 
   onLoad: function (options) {
     // 请求轮播图数据
@@ -51,7 +62,7 @@ Page({
     // 获取对应的页码
     const page=this.data.goods[type].page+1;
     getGoodsData(type,page).then((res)=>{
-      console.log(res);
+      // console.log(res);
 
       // 1.取出数据
       const list=res.data.data.list;
@@ -88,5 +99,39 @@ Page({
     this.setData({
       currentType: types[index]
     })
+  },
+
+
+  onReachBottom() {
+    this._getGoodsData(this.data.currentType);
+  },
+
+  onPageScroll(options){
+    const scrolltop=options.scrollTop;
+
+
+    // 官方：不要在滚动的函数回调中频繁的调用this.setData
+    const flag1 = scrolltop >= TOP_DISTANCE;
+    if(flag1!=this.data.showBackTop){
+      this.setData({
+        showBackTop: flag1
+      })
+    }
+
+    // 修改isTabFixed属性
+    const flag2 = scrolltop >= this.data.tabScrollTop;
+    if(flag2!=this.data.isTabFixed){
+      this.setData({
+        isTabFixed:flag2
+      })
+    }
+  },
+
+  handleImageLoad(){
+    wx.createSelectorQuery().select('#tab-control').boundingClientRect((rect) => {
+      // console.log(res);
+      this.data.tabScrollTop=rect.top;
+
+    }).exec();
   }
 })

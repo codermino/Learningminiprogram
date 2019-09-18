@@ -2,18 +2,18 @@
 <w-swiper list="{{banners}}"/>
 
 <!-- 展示推荐数据 -->
-<w-recommends recommends="{{recommends}}"/>
+<w-recommends recommends="{{recommends}}" bind:imageLoad="handleImageLoad"/>
 
 <!-- 展示本周流行 -->
 <w-popular/>
 
 <!-- 展示tab-control -->
-<w-tab-control titles="{{titles}}" bind:tabclick="handleTabClick"/>
-
+<w-tab-control titles="{{titles}}" id="tab-control" bind:tabclick="handleTabClick" class="{{isTabFixed?'fixed':''}}"/>
+<w-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}"/>
 
 <!-- 展示商品数据 -->
-<view class="goods">
-  <block wx:for="{{goods[currentType].list}}" wx:key="unique">
-    <view class="goods-item">{{item.title}}</view>
-  </block>
-</view>
+<w-goods goods="{{goods[currentType].list}}"/>
+
+<!-- 返回顶部按钮 -->
+<!-- hidden对自定义的组件是无效的 -->
+<w-back-top wx:if="{{showBackTop}}"/>
